@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design system: muted navy, deep slate blue, soft sage, ivory, warm stone, champagne */
+
+@layer base {
+  :root {
+    --background: 40 33% 97%;
+    --foreground: 215 35% 16%;
+
+    --card: 40 40% 99%;
+    --card-foreground: 215 35% 16%;
+
+    --popover: 40 40% 99%;
+    --popover-foreground: 215 35% 16%;
+
+    --primary: 213 32% 26%;
+    --primary-foreground: 40 40% 98%;
+
+    --secondary: 35 20% 91%;
+    --secondary-foreground: 215 35% 20%;
+
+    --muted: 36 18% 93%;
+    --muted-foreground: 215 12% 44%;
+
+    --accent: 140 14% 60%;
+    --accent-foreground: 215 35% 14%;
+
+    --champagne: 38 42% 74%;
+    --champagne-foreground: 215 35% 16%;
+
+    --gold: 38 48% 52%;
+    --gold-soft: 40 55% 88%;
+    --gold-foreground: 215 35% 14%;
+
+    --sage: 140 14% 60%;
+    --sage-soft: 140 20% 92%;
+    --navy: 215 38% 20%;
+    --stone: 34 18% 87%;
+
+    --destructive: 8 52% 44%;
+    --destructive-foreground: 40 40% 98%;
+
+    --border: 35 16% 87%;
+    --input: 35 16% 87%;
+    --ring: 213 32% 40%;
+
+    --radius: 0.75rem;
+
+    --gradient-calm: linear-gradient(160deg, hsl(213 32% 22%), hsl(215 30% 32%) 55%, hsl(140 14% 38%));
+    --gradient-dawn: linear-gradient(150deg, hsl(38 52% 88%), hsl(40 33% 97%) 50%, hsl(140 20% 91%));
+    --gradient-gold: linear-gradient(120deg, hsl(38 45% 62%), hsl(42 68% 80%) 45%, hsl(34 40% 58%));
+    --gradient-surface: linear-gradient(165deg, hsl(40 45% 99.5%), hsl(38 26% 96%));
+    --shadow-soft: 0 1px 2px hsl(215 35% 16% / 0.05), 0 14px 34px -18px hsl(215 35% 16% / 0.26);
+    --shadow-lux: 0 1px 0 hsl(40 60% 100% / 0.7) inset, 0 2px 6px -2px hsl(215 35% 16% / 0.1), 0 26px 60px -30px hsl(215 40% 18% / 0.4);
+    --shadow-gold: 0 10px 30px -14px hsl(38 48% 45% / 0.55);
+
+
+    --sidebar-background: 40 33% 97%;
+    --sidebar-foreground: 215 35% 20%;
+    --sidebar-primary: 213 32% 26%;
+    --sidebar-primary-foreground: 40 40% 98%;
+    --sidebar-accent: 36 18% 93%;
+    --sidebar-accent-foreground: 215 35% 20%;
+    --sidebar-border: 35 16% 87%;
+    --sidebar-ring: 213 32% 40%;
+  }
+
+  .dark {
+    --background: 215 32% 11%;
+    --foreground: 40 30% 94%;
+
+    --card: 215 30% 14%;
+    --card-foreground: 40 30% 94%;
+
+    --popover: 215 30% 14%;
+    --popover-foreground: 40 30% 94%;
+
+    --primary: 40 30% 94%;
+    --primary-foreground: 215 32% 13%;
+
+    --secondary: 215 22% 20%;
+    --secondary-foreground: 40 30% 94%;
+
+    --muted: 215 22% 19%;
+    --muted-foreground: 215 12% 68%;
+
+    --accent: 140 14% 52%;
+    --accent-foreground: 215 32% 11%;
+
+    --champagne: 38 32% 66%;
+    --champagne-foreground: 215 32% 11%;
+
+    --gold: 40 55% 62%;
+    --gold-soft: 38 24% 30%;
+    --gold-foreground: 215 32% 11%;
+
+    --sage: 140 14% 52%;
+    --sage-soft: 150 12% 22%;
+    --navy: 215 32% 16%;
+    --stone: 215 18% 26%;
+
+    --destructive: 8 48% 48%;
+    --destructive-foreground: 40 30% 94%;
+
+    --border: 215 20% 24%;
+    --input: 215 20% 24%;
+    --ring: 140 14% 52%;
+
+    --gradient-calm: linear-gradient(160deg, hsl(215 32% 16%), hsl(215 28% 22%) 60%, hsl(150 14% 24%));
+    --gradient-dawn: linear-gradient(150deg, hsl(215 28% 18%), hsl(215 32% 12%) 60%, hsl(150 12% 18%));
+    --gradient-gold: linear-gradient(120deg, hsl(38 44% 52%), hsl(44 62% 74%) 45%, hsl(34 38% 48%));
+    --gradient-surface: linear-gradient(165deg, hsl(215 28% 16%), hsl(215 30% 13%));
+    --shadow-soft: 0 1px 2px hsl(0 0% 0% / 0.3), 0 12px 32px -18px hsl(0 0% 0% / 0.6);
+    --shadow-lux: 0 1px 0 hsl(40 40% 80% / 0.06) inset, 0 26px 60px -30px hsl(0 0% 0% / 0.8);
+    --shadow-gold: 0 10px 30px -14px hsl(40 55% 55% / 0.35);
+
+
+    --sidebar-background: 215 32% 11%;
+    --sidebar-foreground: 40 30% 94%;
+    --sidebar-primary: 40 30% 94%;
+    --sidebar-primary-foreground: 215 32% 13%;
+    --sidebar-accent: 215 22% 19%;
+    --sidebar-accent-foreground: 40 30% 94%;
+    --sidebar-border: 215 20% 24%;
+    --sidebar-ring: 140 14% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "kern", "liga";
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif tracking-tight;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+
+  /* Respect the appearance setting and the OS reduced-motion preference. */
+  [data-motion="off"] .animate-ping,
+  [data-motion="off"] .animate-pulse {
+    animation: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-ping,
+    .animate-pulse {
+      animation: none;
+    }
+  }
+}
+
+
+@layer components {
+  .surface {
+    @apply relative rounded-2xl border border-border overflow-hidden;
+    background-image: var(--gradient-surface);
+    box-shadow: var(--shadow-lux);
+  }
+
+  /* brushed gold hairline along the top edge of every surface */
+  .surface::before {
+    content: "";
+    @apply pointer-events-none absolute inset-x-0 top-0 h-px opacity-70;
+    background-image: var(--gradient-gold);
+  }
+
+  .gold-rule {
+    @apply h-px w-full;
+    background-image: var(--gradient-gold);
+  }
+
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+
+  .gold-chip {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium;
+    color: hsl(var(--gold-foreground));
+    background-image: var(--gradient-gold);
+    box-shadow: var(--shadow-gold);
+  }
+
+  .eyebrow {
+    @apply text-xs uppercase tracking-[0.18em];
+    color: hsl(var(--gold));
+  }
+}
+
